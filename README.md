@@ -24,7 +24,9 @@ There are no runtime or development package dependencies.
 
 ## Download
 
-Download the latest version from [GitHub Releases](YOUR_RELEASE_URL).
+[Download the latest source ZIP from the `main` branch](https://github.com/karthiGit03/tabflip/archive/refs/heads/main.zip). After extracting it, open the `tabflip-main` folder; it contains the extension files.
+
+This link downloads the current source snapshot and works without a GitHub Release. For versioned downloads, publish a GitHub Release and attach a ZIP file under its **Assets** section.
 
 ## Installation
 
@@ -32,17 +34,15 @@ Download the latest version from [GitHub Releases](YOUR_RELEASE_URL).
 2. Open `chrome://extensions`.
 3. Enable **Developer mode**.
 4. Click **Load unpacked**.
-5. Select the extracted TabFlip folder containing `manifest.json`.
+5. Select the extracted `tabflip-main` folder containing `manifest.json`.
 
-To change the suggested **Alt+Q** shortcut, open `chrome://extensions/shortcuts`. Chrome or the operating system may reserve some key combinations, so TabFlip uses Alt+Q instead of Alt+Tab.
+## First run and use
 
-## Use TabFlip
+1. Check that **Alt+Q** is assigned at `chrome://extensions/shortcuts`.
+2. Switch through the tabs you want TabFlip to remember.
+3. Press **Alt+Q** to cycle through them. It reverses direction at either end.
 
-1. Switch between the tabs you want included. TabFlip records tabs when they become active.
-2. Press **Alt+Q** to switch to the next recently used tab.
-3. Keep pressing **Alt+Q** to move through the visit history. At either end, TabFlip reverses direction.
-
-History is stored in Chrome session storage. It is shared across Chrome windows and is not cleared when focus moves to another application. Closed tabs are removed. Open tabs that have not been activated during the current session are not added to the cycle. Chrome clears session storage when the browser session ends; reloading the extension during development also starts a fresh history.
+TabFlip remembers activated tabs for the current Chrome session. It works across Chrome windows and skips tabs you have not visited.
 
 ## Project structure
 
@@ -85,6 +85,9 @@ Contributions are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md) for the proje
 ## License
 
 See [LICENSE](LICENSE).
+
+
+
 
 
 
