@@ -1,0 +1,13 @@
+{
+  "name": "tabflip-chrome-extension",
+  "version": "0.8.1",
+  "private": false,
+  "type": "module",
+  "description": "Recent-tab switching for Chrome.",
+  "scripts": {
+    "test": "node --test",
+    "check": "node --check src/background.js && node --check src/history.js && node --check tests/history.test.js && node --check tests/manifest.test.js"
+  }
+}
+
+

@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "TabFlip",
+  "version": "0.8.1",
+  "description": "Cycle through recently active Chrome tabs with Alt+Q.",
+  "permissions": ["tabs", "storage"],
+  "icons": {
+    "16": "assets/icons/icon16.png",
+    "32": "assets/icons/icon32.png",
+    "48": "assets/icons/icon48.png",
+    "128": "assets/icons/icon128.png"
+  },
+  "action": {
+    "default_title": "TabFlip",
+    "default_icon": {
+      "16": "assets/icons/icon16.png",
+      "32": "assets/icons/icon32.png",
+      "48": "assets/icons/icon48.png"
+    }
+  },
+  "background": {
+    "service_worker": "src/background.js",
+    "type": "module"
+  },
+  "commands": {
+    "cycle-recent-tabs": {
+      "suggested_key": { "default": "Alt+Q" },
+      "description": "Switch to the next recently active tab"
+    }
+  }
+}
+
